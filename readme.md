@@ -43,8 +43,8 @@ $type = $_POST["ban_type"];
 # Usage
 - [1] Open venom.php and set the target on line 40
 - Experimental = You can uncomment ```restore_hash($password);``` on the 67 line
-then import code from the db.sql and your wordlist into the mysql server,
-and you will be able to use your password cracking wordlist for md5 hash from the your server.
+then import code from the db.sql and your wordlist into the mysql server.
+It  will give you posibility to use your own password cracking wordlist for md5 hash from the your server without using any other online platforms.
 ```
 php venom.php
 ```
