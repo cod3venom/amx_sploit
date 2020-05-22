@@ -3,7 +3,7 @@
 <p> Amxbans is an website for the Counter-Strike 1.6 banlists </p>
 <p> It works like -> Admin gives you ban, and all information about ban are appears on the website </p>
 
- 
+ <img src="screen.png"  height="400" width="600">
 
 # Explanation
 <img src="explanation.png"  height="400" width="600">
@@ -48,4 +48,3 @@ It  will give you posibility to use your own password cracking wordlist for md5 
 ```
 php venom.php
 ```
-<img src="screen.png"  height="400" width="600">
